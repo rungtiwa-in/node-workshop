@@ -1,0 +1,9 @@
+npm init -y 
+
+npm i [package_name]    //install
+npm un [package_name]   //uninstall
+
+npm i -g nodemon
+
+node [file_name]        //run
+

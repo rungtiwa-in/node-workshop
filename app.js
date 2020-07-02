@@ -75,16 +75,53 @@
 
 // ------------------------------------
 
+// const fetch = require('node-fetch')
+
+// async function getUser() {
+//     try {
+//         const response = await fetch('https://randomuser.me/api')
+//         const data = await response.json()
+//         console.log(response.status)
+//         console.log(data)
+//     } catch (err) {
+//         console.log(err)
+//     }
+// }
+
+// getUser()
+
+// -------------------------------------
+
+// const moment = require('moment') // require
+// console.log(moment().format())
+// console.log(moment().format('LLLL'))
+
+// -------------------------------------
+
+// const fetch = require('node-fetch')
+
+// fetch('https://randomuser.me/api/')
+//     .then(res => res.json())
+//     .then(data => console.log(data))
+//     .then(() => console.log('--end--'))
+
+// -------------------------------------
+
 const fetch = require('node-fetch')
+
 async function getUser() {
     try {
-        const response = await fetch('https://randomuser.me/api')
+        const response = await fetch('https://randomuser.me/api/')
         const data = await response.json()
-        console.log(response.status)
+        console.log('status : ' + response.status)
         console.log(data)
     } catch (err) {
         console.log(err)
     }
 }
 
-getUser()
+async function callUser(){
+    await getUser()
+}
+
+callUser()
