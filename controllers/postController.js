@@ -3,7 +3,6 @@ module.exports.index = function (req, res) {
     res.status(200).json("Hello POST");
 }
 
-
 module.exports.createPost = function (req, res) {
     const {name, age} = req.body
     console.log(`Name : ${name}, Age : ${age}`)
